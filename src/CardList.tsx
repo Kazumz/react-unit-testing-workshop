@@ -11,7 +11,12 @@ interface ICardListProps {
 const CardList: React.FC<ICardListProps> = ({ cards, onCardSelected }) => {
     return (
         <div className="card-list">
-            {cards.map((card, index) => <Card card={card} onClick={() => onCardSelected(index)}/>)}
+            {cards.map((card, index) => 
+                <Card 
+                    card={card}
+                    onClick={() => onCardSelected(index)}
+                />
+            )}
         </div>
     )
 }
